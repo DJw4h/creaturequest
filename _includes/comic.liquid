@@ -3,12 +3,15 @@ If you want to remove one of the navigation buttons, just remove one of the
 `render` tags!
 {% endcomment %}
 
+{% comment %}
 {% render 'comicNav.liquid', collection: collection, page: page %}
+{% endcomment %}
 
 <div id="comicPage">
   {% for panel in images %}
     <img src="{{ panel }}" alt="{{ alt }}">
   {% endfor %}
+  {{ content }}
 </div>
 
 {% render 'comicNav.liquid', collection: collection, page: page %}
