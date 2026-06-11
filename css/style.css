@@ -127,8 +127,11 @@ footer p {
   width: var(--pg-width);
 }
 
+
 /* style nav button images */
 .comicNav {
+  font-family: "Silkscreen", sans-serif;
+  text-decoration: none;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -152,7 +155,7 @@ footer p {
 }
 
 .authorNotes h1, h6{
-  font-family: "Cherry Cream Soda", cursive;
+  font-family: "Silkscreen", sans-serif;
   /**
    * Todo: Write why we use rem units and set them throughout the stylesheet
    * https://www.youtube.com/watch?v=N5wpD9Ov_To
