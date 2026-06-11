@@ -54,7 +54,7 @@ p {
 
 /* universal background color */
 body {
-  background-color: #da5437;
+  background-color: #a6a6a6;
 }
 
 /* link colors */
@@ -149,6 +149,16 @@ footer p {
   padding-top: 0px;
   width: var(--pg-width);
   font-size: 1.125rem;
+}
+
+.authorNotes h1, h6{
+  font-family: "Cherry Cream Soda", cursive;
+  /**
+   * Todo: Write why we use rem units and set them throughout the stylesheet
+   * https://www.youtube.com/watch?v=N5wpD9Ov_To
+   */
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* SUBPAGES */

@@ -11,7 +11,6 @@ we're on the first page of the comic, we don't need to show that button.
 {% assign current = collection | getCollectionItem: page %}
 {% assign first = collection | first %}
 {% assign previous = collection | getPreviousCollectionItem: page %}
-{% assign next = collection | getNextCollectionItem: page %}
 {% assign last = collection | last %}
 
 <div class="comicNav">
@@ -21,10 +20,8 @@ we're on the first page of the comic, we don't need to show that button.
   {% if previous %}
     <a href="{{ previous.url }}#comicPage"><img src="/img/comicnav/nav_previous.png" alt="Previous"></a>
   {% endif %}
-  {% if next %}
-    <a href="{{ next.url }}#comicPage"><img src="/img/comicnav/nav_next.png" alt="Next"></a>
-  {% endif %}
   {% if current != last %}
     <a href="{{ last.url }}#comicPage"><img src="/img/comicnav/nav_last.png" alt="Last"></a>
   {% endif %}
 </div>
+<h6> To add a prompt on the latest page you need to be on the home page or press the home page link at the top, thank u</h5>
