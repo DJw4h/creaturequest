@@ -49,7 +49,7 @@ p {
    * the two given properties as the width! For more details on it and similar
    * properties, check out Kevin Powell's video: https://youtu.be/U9VF-4euyRo
    */
-  --pg-width: min(64rem, 90%);
+  --pg-width: min(40rem);
 }
 
 /* universal background color */
@@ -117,14 +117,39 @@ footer p {
   margin: 1rem 0;
 }
 
-/* style comic page image */
+/* style comic page image: span the authorNotes content area */
 #comicPage {
-  margin: 0 auto;
-  /**
-   * Here is our first example of calling a CSS variable, using the `var()`
-   * property to call `--pg-width`!
-   */
-  width: var(--pg-width);
+  margin: 0;
+  /* compensate for the parent `.authorNotes` left/right padding (3px)
+     so the comic content touches the inner edges */
+  width: calc(100% + 6px);
+  margin-left: -3px;
+  margin-right: -3px;
+  box-sizing: border-box;
+}
+
+/* make images fill the comic area (touch left/right) */
+#comicPage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* center headings inside the comic area with horizontal padding */
+#comicPage h1 {
+  text-align: center;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+}
+
+/* style the text/comment block inside the comic area */
+#textcomment {
+  padding-inline: 1rem;
+  text-align: center;
+  margin: 0.75rem auto;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 

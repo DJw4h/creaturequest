@@ -11,7 +11,9 @@ If you want to remove one of the navigation buttons, just remove one of the
   {% for panel in images %}
     <img src="{{ panel }}" alt="{{ alt }}" >
   {% endfor %}
-  {{ content }}
+  <div id="textcomment">
+    {{ content }}
+  </div>
 </div>
 
 {% render 'comicNav.liquid', collection: collection, page: page %}
