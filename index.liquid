@@ -15,7 +15,7 @@ individual collections to use within templates.
 
 {%# If you want the first comic instead of the latest, set `last` to `first` %}
 {% assign latest = collections.comic | last %}
-<meta property="og:title" content="{{ latest.id }}" />
+<meta property="og:title" content="{{ latest.data.id }}" />
 <div class="authorNotes">
   </br>
   <h1>{{ latest.data.title }}</h1>
