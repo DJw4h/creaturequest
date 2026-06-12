@@ -49,7 +49,7 @@ p {
    * the two given properties as the width! For more details on it and similar
    * properties, check out Kevin Powell's video: https://youtu.be/U9VF-4euyRo
    */
-  --pg-width: min(40rem);
+  --pg-width: min(40rem, 90%);
 }
 
 /* universal background color */
