@@ -7,7 +7,9 @@ eleventyComputed:
   # one within the front matter data.
   # (https://www.11ty.dev/docs/data-computed/)
   title: "{% if title %}{{ title }}{% else %}Page {{ page.fileSlug }}{% endif %}"
+  id: "{{ page.fileSlug }}"
 ---
+<meta property="og:title" content="{{ id }}" />
 {% comment %}
 Beyond breaking pages into multiple components that can be included at will,
 Liquid files can apply data from 11ty onto pages. For a full breakdown on using
@@ -22,6 +24,13 @@ Liquid file within the template.
   </br>
   <h1>{{ title }}</h1>
   {% render 'comic.liquid', collection: collections.comic, page: page, images: images, alt: alt, content: content %}
-  </div>
+</div>
 {%# If we have author notes, include them %}
-
+<script src="https://utteranc.es/client.js"
+        repo="DJw4h/creaturequest"
+        issue-term="og:title"
+        label="💬"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
