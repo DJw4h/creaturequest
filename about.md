@@ -2,8 +2,12 @@
 title: About
 layout: layouts/page.liquid
 ---
-This website was made badly so i can keep a repository of the comics that i am posting on bluesky and also make sure that i can type everything i want to type without the annoying limitations of twitter like websites.
+The main concept of this comic its to do something like bards quest and problem sleuth
 
-I have no idea how to html, but im doing this anyway, because sure why not
+Tell a story with the input from readers'
+
+Be sure to comment on the latest page your ideas.
+
+Heres a picture of me
 ![image of dj](/img/iamgeabout.jpeg)
 wah wah!
