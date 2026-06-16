@@ -26,11 +26,28 @@ Liquid file within the template.
   {% render 'comic.liquid', collection: collections.comic, page: page, images: images, alt: alt, content: content %}
 </div>
 {%# If we have author notes, include them %}
-<script src="https://utteranc.es/client.js"
-        repo="DJw4h/creaturequest"
-        issue-term="og:title"
-        label="💬"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+
+<script>
+  function getMetaContent(name) {
+    const metas = document.getElementsByTagName('meta');
+    return metas[metas.length-1].getAttribute('content');
+    }
+
+  var id = "{{ latest.data.id }}"
+  var remark_config = {
+    host: 'http://remark42.sqrk.party',
+    url: getMetaContent('page'),
+    site_id: 'creaturequest',
+    components: ['embed', 'last-comments'],
+    max_shown_comments: 100,
+    theme: 'light',
+    page_title: 'ramblings',
+    locale: 'en',
+    show_email_subscription: false,
+    simple_view: false,
+    no_footer: false
+  }
 </script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+<div class="ramblings"><h1>RAMBLINGS</h2></div>
+<div id="remark42">Loading Ramblings...</div>
